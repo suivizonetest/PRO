@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Added maximum-scale and user-scalable=no to prevent auto-zooming on mobile devices (especially iOS) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>ZONE TEST PRO</title>
   <link rel="icon" href="https://i.postimg.cc/CKnnMf72/download.png" />
   <style>
@@ -11,8 +12,9 @@
       padding: 0;
       width: 100%;
       height: 100%;
-      background-color: #eee;
+      background-color: #121212; /* Switched to a dark background to prevent white flashes while loading */
       overflow: hidden; 
+      touch-action: pan-y; /* Prevents weird pinch-to-zoom gestures but allows scrolling */
     }
 
     .iframe-container {
